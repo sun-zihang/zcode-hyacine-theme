@@ -1,0 +1,5 @@
+*.log
+*.tmp
+vars-dump.txt
+*.local
+.DS_Store
