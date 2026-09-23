@@ -134,7 +134,7 @@ ie4uinit.exe -show   # 刷新图标缓存
 ## 署名与声明
 
 - 主题底座：[sorrowKnight123/zcode-beautify-for-wallpaper-engine](https://github.com/sorrowKnight123/zcode-beautify-for-wallpaper-engine)（MIT）
-- 壁纸画面源自《崩坏：星穹铁道》官方宣传图（© HoYoverse/miHoYo），
+- 壁纸画面与图标裁切源自《崩坏：星穹铁道》官方宣传图（© HoYoverse/miHoYo），
   工坊视频版作者 [Ra轮回](https://space.bilibili.com)（B站），版权归原作者所有；
   本仓库仅非商用粉丝用途，动态版请到 Wallpaper Engine 创意工坊订阅支持作者
 - 本项目与 HoYoverse、ZCode、OpenAI 均无关联，纯属粉丝自制
