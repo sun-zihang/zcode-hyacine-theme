@@ -14,6 +14,7 @@
 | ZCode 主题注入器 | `zcode/hyacine-theme.mjs` | 通过 CDP 给 ZCode 桌面版注入 43 个语义 CSS 变量覆盖（`!important`），常驻 watch、ZCode 重启/刷新自动重注入 |
 | ZCode 视频探针 | `zcode/probe-video.mjs` | 诊断壁纸视频是否真的在播放（currentTime / readyState / 分辨率） |
 | Codex CLI 主题 | `codex/Hyacine Dusklight.tmTheme` | Codex CLI 的 TextMate 主题：暮紫底、粉关键字、青字符串、金常量 |
+| 应用图标 | `icon/hyacine.ico` | 暮紫圆角底 + 风信子粉新月 + 青色四角星，可替换桌面/开始菜单快捷方式图标 |
 | 静态壁纸 | `wallpapers/hyacine-static.jpg` | 2560×1440，开箱即用 |
 
 主题概念取自角色设定：风堇是背负「天空」火种的黄金裔、昏光庭院的医师——
@@ -90,6 +91,27 @@ cp "codex/Hyacine Dusklight.tmTheme" ~/.codex/themes/
 ```
 
 或在 Codex CLI 里输 `/theme` 直接选。
+
+## 更换应用图标（可选）
+
+把桌面/开始菜单的 ZCode 快捷方式图标指向本仓库的 `icon/hyacine.ico`：
+
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+foreach ($p in @("$HOME\Desktop\ZCode.lnk",
+  "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\ZCode.lnk")) {
+  if (Test-Path $p) {
+    $s = $ws.CreateShortcut($p)
+    $s.IconLocation = "C:\Users\you\zcode-hyacine-theme\icon\hyacine.ico,0"
+    $s.Save()
+  }
+}
+ie4uinit.exe -show   # 刷新图标缓存
+```
+
+说明：只换快捷方式外观，不修改安装文件，客户端升级不受影响；
+**运行中的窗口任务栏图标**来自 exe 本体，注入类方案改不了。
+还原 = 把 IconLocation 改回 ZCode.exe 安装路径即可。
 
 ## 调色板
 
