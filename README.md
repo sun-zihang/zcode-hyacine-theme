@@ -92,6 +92,24 @@ cp "codex/Hyacine Dusklight.tmTheme" ~/.codex/themes/
 
 或在 Codex CLI 里输 `/theme` 直接选。
 
+### Windows Terminal 壁纸 + 配色（可选）
+
+```bash
+node codex/add-terminal-profile.js
+```
+
+会自动往 Windows Terminal 里加：
+- **Hyacine Dusklight** 配色方案（16 色全按主题调）
+- **风堇 Hyacine** profile：暮紫底 + 壁纸背景（16% 透明度），在这个 tab 里跑
+  `codex` 就是完整氛围；普通 PowerShell 想用同配色，把该 profile 的 colorScheme
+  抄过去即可。
+
+### Codex 桌面 App（商店版）说明
+
+桌面 App 被 OpenAI 加固（Chromium 沙盒 + ACL，无法带调试参数启动），
+**无法外部注入主题/壁纸**，只能用 App 自带 Settings → Appearance 切深浅色。
+本仓库的 `codex/launch-codex-cdp.ps1` 是当时的尝试留档。
+
 ## 更换应用图标（可选）
 
 把桌面/开始菜单的 ZCode 快捷方式图标指向本仓库的 `icon/hyacine.ico`：
