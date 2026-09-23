@@ -76,8 +76,35 @@ html.theme-zai-light {
 }
 `;
 
+const TEXT_MAP = [
+  [/接下来交给我吧/g, '风堇来守护你的效率哦'],
+  [/提出后续修改要求/g, '有什么想改的，尽管告诉风堇～'],
+];
+
 const BOOT = `(function(){
-  function add(){
+  var MAP = ${JSON.stringify(TEXT_MAP.map(([r, s]) => [r.source, s]))};
+  function replaceText(s){
+    for (var i = 0; i < MAP.length; i++) s = s.replace(new RegExp(MAP[i][0], 'g'), MAP[i][1]);
+    return s;
+  }
+  function walk(root){
+    if (!root) return;
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var n, touched = false;
+    while ((n = w.nextNode())) {
+      if (MAP.some(function(m){ return m[0].test(n.textContent); })) {
+        n.textContent = replaceText(n.textContent);
+        touched = true;
+      }
+    }
+    var els = root.querySelectorAll ? root.querySelectorAll('[placeholder]') : [];
+    for (var j = 0; j < els.length; j++) {
+      var np = replaceText(els[j].getAttribute('placeholder') || '');
+      if (np !== els[j].getAttribute('placeholder')) els[j].setAttribute('placeholder', np);
+    }
+    return touched;
+  }
+  function run(){
     var s = document.getElementById('hyacine-theme');
     if (!s) {
       s = document.createElement('style');
@@ -85,9 +112,14 @@ const BOOT = `(function(){
       (document.documentElement || document.head || document).appendChild(s);
     }
     s.textContent = ${JSON.stringify(CSS)};
+    walk(document.body);
+    if (!window.__hyacineTextObserver) {
+      window.__hyacineTextObserver = new MutationObserver(function(){ walk(document.body); });
+      window.__hyacineTextObserver.observe(document.body, { childList: true, subtree: true, characterData: true });
+    }
   }
-  add();
-  document.addEventListener('DOMContentLoaded', add);
+  run();
+  document.addEventListener('DOMContentLoaded', run);
 })();`;
 
 const seen = new Set();
