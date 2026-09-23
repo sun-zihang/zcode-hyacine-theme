@@ -6,57 +6,55 @@
 
 const CSS = `
 html.theme-zai-dark {
-  --color-background: rgba(46, 36, 86, 0.42) !important;
-  --color-brand: #ff7fb8 !important;
-  --color-accent: #7fdcd2 !important;
-  --color-background-alt: rgba(48, 40, 92, 0.8) !important;
-  --color-background-win-alt: rgba(38, 30, 76, 0.8) !important;
-  --color-card: rgba(40, 34, 76, 0.88) !important;
-  --color-card-border: rgba(140, 126, 195, 0.6) !important;
-  --color-card-selected: rgba(64, 54, 112, 0.94) !important;
-  --color-border: rgba(140, 126, 195, 0.62) !important;
-  --color-border-hover: rgba(162, 148, 215, 0.95) !important;
-  --color-border-color-interactive: rgba(140, 126, 195, 0.78) !important;
-  --color-border-color-interactive-hover: #a294d8 !important;
-  --color-border-color-interactive-active: rgba(255, 150, 200, 0.95) !important;
-  --color-input: rgba(62, 52, 108, 0.6) !important;
-  --color-input-focused: rgba(62, 52, 108, 0.8) !important;
-  --color-input-border: rgba(140, 126, 195, 0.68) !important;
-  --color-input-border-focused: rgba(255, 150, 200, 0.95) !important;
-  --color-input-border-hover: rgba(172, 158, 225, 0.78) !important;
-  --color-foreground: #f3e6f6 !important;
-  --color-foreground-subtle: #e4d0ee !important;
-  --color-foreground-subtlest: rgba(228, 208, 238, 0.8) !important;
-  --color-foreground-inverse: #302a58 !important;
-  --divider-color: rgba(150, 136, 205, 0.48) !important;
-  --color-header: #251f4a !important;
-  --color-toast: #302a58 !important;
-  --color-tooltip: #363064 !important;
-  --color-tooltip-foreground: #f8f2ff !important;
-  --color-tooltip-tag: #403a72 !important;
-  --color-tooltip-tag-foreground: #c6bce0 !important;
-  --color-find-highlight: #73385c !important;
-  --color-find-highlight-active: #6a4478 !important;
-  --color-idle-task: #9a78f0 !important;
-  --color-idle-task-surface: #1e1448 !important;
-  --color-file-node: #5fd8cc38 !important;
-  --color-file-node-foreground: #7fd8ce !important;
-  --color-file-node-hover: #5fd8cc4a !important;
-  --color-command-node: #b4a6e238 !important;
-  --color-command-node-foreground: #d2c8ee !important;
-  --color-command-node-hover: #b4a6e248 !important;
-  --color-interaction-ask-foreground: #82d0ec !important;
-  --color-interaction-ask-surface: #083044 !important;
-  --color-warning: #f5a94e !important;
-  scrollbar-color: rgba(255, 150, 195, 0.45) transparent !important;
+  --color-brand: #ffb1c9 !important;
+  --color-accent: #8ed4cf !important;
+  --color-background-alt: rgba(38, 36, 56, 0.62) !important;
+  --color-background-win-alt: rgba(29, 27, 45, 0.62) !important;
+  --color-card: rgba(31, 30, 48, 0.72) !important;
+  --color-card-border: rgba(108, 98, 140, 0.5) !important;
+  --color-card-selected: rgba(51, 46, 77, 0.87) !important;
+  --color-border: rgba(108, 98, 140, 0.55) !important;
+  --color-border-hover: rgba(122, 112, 158, 0.9) !important;
+  --color-border-color-interactive: rgba(108, 98, 140, 0.7) !important;
+  --color-border-color-interactive-hover: #7a7098 !important;
+  --color-border-color-interactive-active: rgba(255, 170, 205, 0.9) !important;
+  --color-input: rgba(51, 46, 77, 0.5) !important;
+  --color-input-focused: rgba(51, 46, 77, 0.7) !important;
+  --color-input-border: rgba(108, 98, 140, 0.6) !important;
+  --color-input-border-focused: rgba(255, 170, 205, 0.9) !important;
+  --color-input-border-hover: rgba(142, 132, 176, 0.7) !important;
+  --color-foreground: #ece7f2 !important;
+  --color-foreground-subtle: #d9d0e4 !important;
+  --color-foreground-subtlest: rgba(217, 208, 228, 0.72) !important;
+  --color-foreground-inverse: #322e40 !important;
+  --divider-color: rgba(120, 110, 160, 0.4) !important;
+  --color-header: #1d1b2e !important;
+  --color-toast: #262438 !important;
+  --color-tooltip: #2a2740 !important;
+  --color-tooltip-foreground: #f4effa !important;
+  --color-tooltip-tag: #343150 !important;
+  --color-tooltip-tag-foreground: #b0a8c8 !important;
+  --color-find-highlight: #63324a !important;
+  --color-find-highlight-active: #5b3f5e !important;
+  --color-idle-task: #8b6ce8 !important;
+  --color-idle-task-surface: #1a1240 !important;
+  --color-file-node: #64c8c029 !important;
+  --color-file-node-foreground: #7fd4cb !important;
+  --color-file-node-hover: #64c8c038 !important;
+  --color-command-node: #a89ec824 !important;
+  --color-command-node-foreground: #c3bbe0 !important;
+  --color-command-node-hover: #a89ec833 !important;
+  --color-interaction-ask-foreground: #7cc9e8 !important;
+  --color-interaction-ask-surface: #062830 !important;
+  --color-warning: #f0a24e !important;
+  scrollbar-color: rgba(255, 150, 195, 0.35) transparent !important;
 }
 html.theme-zai-light {
-  --color-brand: #e8558a !important;
-  --color-accent: #189e94 !important;
-  scrollbar-color: rgba(210, 70, 130, 0.45) transparent !important;
+  --color-brand: #e8648f !important;
+  --color-accent: #1f9e96 !important;
 }
 ::selection {
-  background: rgba(255, 120, 185, 0.5);
+  background: rgba(255, 150, 190, 0.35);
 }
 `;
 
