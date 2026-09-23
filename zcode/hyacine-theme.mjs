@@ -23,10 +23,10 @@ html.theme-zai-dark {
   --color-input-border: rgba(108, 98, 140, 0.6) !important;
   --color-input-border-focused: rgba(255, 170, 205, 0.9) !important;
   --color-input-border-hover: rgba(142, 132, 176, 0.7) !important;
-  --color-foreground: #ece7f2 !important;
-  --color-foreground-subtle: #d9d0e4 !important;
-  --color-foreground-subtlest: rgba(217, 208, 228, 0.72) !important;
-  --color-foreground-inverse: #322e40 !important;
+  --color-foreground: #dbc9f2 !important;
+  --color-foreground-subtle: #c8b2e6 !important;
+  --color-foreground-subtlest: rgba(200, 178, 230, 0.85) !important;
+  --color-foreground-inverse: #2f2a48 !important;
   --divider-color: rgba(120, 110, 160, 0.4) !important;
   --color-header: #1d1b2e !important;
   --color-toast: #262438 !important;
@@ -47,6 +47,24 @@ html.theme-zai-dark {
   --color-interaction-ask-foreground: #7cc9e8 !important;
   --color-interaction-ask-surface: #062830 !important;
   --color-warning: #f0a24e !important;
+  --color-usage-chart-1: #ff8fc0 !important;
+  --color-usage-chart-2: #8fdcd2 !important;
+  --color-usage-chart-3: #b49ae8 !important;
+  --color-usage-chart-4: #f0a24e !important;
+  --color-usage-chart-5: #7fb3e8 !important;
+  --color-usage-chart-6: #ffc4de !important;
+  --color-usage-heatmap-0: color-mix(in oklab, #b49ae8 0%, rgba(23, 18, 19, 0.72)) !important;
+  --color-usage-heatmap-1: color-mix(in oklab, #b49ae8 24%, rgba(23, 18, 19, 0.72)) !important;
+  --color-usage-heatmap-2: color-mix(in oklab, #b49ae8 42%, rgba(23, 18, 19, 0.72)) !important;
+  --color-usage-heatmap-3: color-mix(in oklab, #b49ae8 62%, rgba(23, 18, 19, 0.72)) !important;
+  --color-usage-heatmap-4: color-mix(in oklab, #ff8fc0 78%, rgba(23, 18, 19, 0.72)) !important;
+  --color-context-breakdown-1: #6a5a9e !important;
+  --color-context-breakdown-2: #7d6bb0 !important;
+  --color-context-breakdown-3: #907cc2 !important;
+  --color-context-breakdown-4: #a38ed4 !important;
+  --color-context-breakdown-5: #b6a0e6 !important;
+  --color-context-breakdown-6: #c9b2f2 !important;
+  --color-context-breakdown-7: #dcc4fa !important;
   scrollbar-color: rgba(255, 150, 195, 0.35) transparent !important;
 }
 html.theme-zai-light {
